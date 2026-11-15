@@ -1,0 +1,138 @@
+{
+  "sam_native_errors": {
+    "height_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 155.0281926369621,
+      "bias_mm": -57.45842417019276,
+      "p95_abs_mm": 360.51150113344187
+    },
+    "hip_section_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 311.35355174331204,
+      "bias_mm": 305.6030715928043,
+      "p95_abs_mm": 678.7551844710607
+    },
+    "waist_section_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 90.5598395659406,
+      "bias_mm": 2.118637088012674,
+      "p95_abs_mm": 209.63666706533465
+    },
+    "chest_section_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 70.83840273992328,
+      "bias_mm": -7.144680852955165,
+      "p95_abs_mm": 150.79302595594214
+    }
+  },
+  "sam_height_calibrated_errors": {
+    "height_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 7.460698725481052e-14,
+      "bias_mm": -7.105427357601002e-15,
+      "p95_abs_mm": 2.2737367544323206e-13
+    },
+    "hip_section_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 321.50796571452196,
+      "bias_mm": 313.44752922166515,
+      "p95_abs_mm": 739.0822453817195
+    },
+    "waist_section_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 35.061767484261395,
+      "bias_mm": 31.64522559345111,
+      "p95_abs_mm": 86.05867276972037
+    },
+    "chest_section_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 28.042437858422733,
+      "bias_mm": 15.925698666668737,
+      "p95_abs_mm": 60.203060904176596
+    }
+  },
+  "sdf_native_errors": {
+    "height_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 1.9910165574401617,
+      "bias_mm": -1.9743095617741346,
+      "p95_abs_mm": 3.823620080947875
+    },
+    "hip_section_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 13.885483391464447,
+      "bias_mm": -0.9015102585633366,
+      "p95_abs_mm": 59.99224160088679
+    },
+    "waist_section_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 9.578146851048388,
+      "bias_mm": -7.8688275331194975,
+      "p95_abs_mm": 20.285362073742856
+    },
+    "chest_section_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 9.026620193827362,
+      "bias_mm": -1.9542442675848157,
+      "p95_abs_mm": 22.298293459347217
+    }
+  },
+  "sdf_height_calibrated_errors": {
+    "height_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 3.907985046680551e-14,
+      "bias_mm": 0.0,
+      "p95_abs_mm": 2.2737367544323206e-13
+    },
+    "hip_section_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 13.764213088053939,
+      "bias_mm": -0.20032545093045995,
+      "p95_abs_mm": 58.42976014598974
+    },
+    "waist_section_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 8.954763103426508,
+      "bias_mm": -6.817057900432021,
+      "p95_abs_mm": 19.34754171450317
+    },
+    "chest_section_mm": {
+      "valid": 128,
+      "total": 128,
+      "mae_mm": 8.960392122985057,
+      "bias_mm": -1.013079215755381,
+      "p95_abs_mm": 20.84997060760654
+    }
+  },
+  "protocol": "fixed-height-section-proxies-v1",
+  "git_commit": "20103f03583779e33c921a056af660b329597219",
+  "checkpoint_sha256": "b5a2f9d305dd02626b967aa2e86021fba07065df66ce7a7e00ffb9664f150abf",
+  "mhr_sha256": "352e271a6c42729c68554ceaea0c955e866970160c31e35506d782dc0f7377bc",
+  "dataset_sha256": "46f26c7ef249f1f68787a81f9900fa323f86dc42fae8c4b053e1cc7abea04c03",
+  "source_images_sha256": "49eb749b0cd8443ee74afa5e2b4f9712a0659d9adfa5b87e73cb98c76a975480",
+  "paired_bodies": 128,
+  "limitation": "Synthetic orthographic images differ from SAM perspective training. Section proxies are not anatomical tape measurements.",
+  "calibration": "Known GT height used only for explicitly labeled calibrated metrics, never inference.",
+  "sam_failures": 0,
+  "hip_audit": {
+    "(2, 2)": 61,
+    "(2, 1)": 56,
+    "(1, 1)": 9,
+    "(3, 1)": 2
+  }
+}
