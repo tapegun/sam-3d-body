@@ -13,12 +13,18 @@ class Dinov3Backbone(nn.Module):
         self.cfg = cfg
 
         self.encoder = torch.hub.load(
-            "facebookresearch/dinov3",
+            "facebookresearch/dinov3:6876159a11b4df116f30f667f8c9888617df0751",
             self.name,
             source="github",
             pretrained=False,
+            trust_repo=True,
+            skip_validation=True,
             drop_path=self.cfg.MODEL.BACKBONE.DROP_PATH_RATE,
         )
+        # SAM checkpoint omits this pretraining-only token. Unmasked DINO
+        # uses 0 * mask_token, so initialize deterministically rather than empty.
+        with torch.no_grad():
+            self.encoder.mask_token.zero_()
         self.patch_size = self.encoder.patch_size
         self.embed_dim = self.embed_dims = self.encoder.embed_dim
 
